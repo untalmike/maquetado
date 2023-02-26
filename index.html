@@ -7,165 +7,82 @@
 	<title>
 		Maquetado
 	</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
 
-	<style type="text/css">
-		
-		html{
-			min-height: 100%;
-			position: relative;
-		}
+	<!-- addition of jQuery --> 
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet"><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-		body{
-			margin: 0;
-			margin-bottom: 40px;
-		}
-
-		ul{
-			list-style-type: none;
-			margin: initial;
-			padding: 0;
-			width: 200px;
-			background-image: url('Imagenes/vertical.jpg');
-			height: 100%;
-			position: fixed;
-			overflow: auto;
-			margin-top: 184px;
-		}
-
-		a:link{
-			text-decoration: none;
-		}
-
-		li a{
-			display: block;
-			color: white;
-			padding: 8px 16px;
-			text-decoration: none;
-			font-family: 'Century Gothic';
-			font-size: 25px;
-		}
-
-		li a:hover{
-			background-color: #555;
-			color: white;
-		}
-
-		
-		footer {
-			background-color: grey;
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-			height: 40px;
-			color: white;
-			text-align: center;
-		}
-
-		header{
-			position: fixed;
-			width: 100%;
-			background-color: rgba(0,0,0,0.5);
-			background-image: url('Imagenes/escamas.jpg');
-			background-repeat: no-repeat;
-			background-size: 100%;
-			background-position: center;
-
-		}
-
-		header h1{
-			color: white;
-			font-family: 'Century Gothic';
-			font-style: italic;
-			opacity: 1.8;
-		}
-
-		section{
-			float: right;
-			background-color: #f1f1f1;
-			width: 87%;
-			margin-top: 184px;
-			background-image: url('Imagenes/samo1.jpg');
-			background-repeat: no-repeat;
-			background-size: 100%;
-			background-color: rgba(0,0,0,0.8);
-		}
-
-		#seccion{
-			text-align: center;
-			font-family: 'Century Gothic';
-			font-size: 80px;
-			color: silver;
-		}
-
-		div img{
-			width: 400px;
-			height: 600px;
-		}
-
-		#contenedorPirmario{
-			width: 835px;
-			margin-left: 20px;
-		}
-
-		#seccionSecundaria{
-			margin-top: -700px;
-			float: right;
-			text-align: center;
-			width: 37%;
-		}
-		div{
-			background-color: transparent;
-		}
-
-		div h1{
-			color: silver;
-			text-align: center;
-			font-family: 'Century Gothic';
-		}
-		
-	</style>
-
+	<script>
+		$(document).ready(function(){
+			$('#botones li').on('click', 'a', function(){
+				// alert($(this).attr('id'))
+				switch($(this).attr('id')){
+					case 'home':
+						document.getElementById('casa').style.display='block';
+						break;
+					case 'art':
+						console.log('art');
+						break;
+					case 'history':
+						console.log('history');
+						break;
+					case 'origins':
+						console.log('origins');
+						break;
+					case 'proyects':
+						console.log('proyects');
+						break;
+					case 'contact':
+						console.log('contact');
+						break;
+					case 'blog':
+						console.log('blog');
+						break;
+					default:
+						console.log('no es home');
+						break;
+				}
+			});
+		});
+	</script>
 </head>
 <body>
-	<header class="jumbotron">
+	<header>
 		<h1>Alan Jhonson Art.</h1>
+		<ul id="botones">
+			<li>
+				<a id="home">Home</a>
+			</li>
+			<li>
+				<a id="art">Art</a>
+			</li>
+			<li>
+				<a id="history">History</a>
+			</li>
+			<li>
+				<a id="origins">Origins</a>
+			</li>
+			<li>
+				<a id="proyects">Proyects</a>
+			</li>
+			<li>
+				<a id="contact">Contact</a>
+			</li>
+			<li>
+				<a id="blog">Blog</a>
+			</li>
+		</ul>
 	</header>
 
 
-	<nav>
-		<ul>
-			<li href=""><a href=""><font><b>I</b>nicio</font></a></li>
-			<li href=""><a href=""><b>E</b>l</a></li>
-			<li href=""><a href=""><b>H</b>istoria</a></li>
-			<li href=""><a href=""><b>O</b>rigenes</a></li>
-			<li href=""><a href=""><b>P</b>royectos</a></li>
-			<li href=""><a href=""><b>C</b>ontacto</a></li>
-			<li href=""><a href=""><b>B</b>log</a></li>
-		</ul>
-	</nav>
 
-	<section>
-		<h1 id="seccion">Bienvenido</h1>
-		<div id="contenedorPirmario" class="container">
-			<br>
-			<img src="Imagenes/loco.jpg">
-			<img src="Imagenes/hellboy.jpg">
-			<br>
-			<br>
-		</div>
-		<div id="seccionSecundaria" class="container">
-			<br>
-			<img src="Imagenes/alff.jpg">
-			<br>
-			<br>
-		</div>
-		<br>
-	<br>
-	<br>
+	<section style="background-color: chocolate;">
+		<img src="../Imagenes/hellboy.jpg">
+		<img src="../Imagenes/loco.jpg">
+		<img src="../Imagenes/alff.jpg">
 	</section>
 
 
